@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Charly_Pedidos.Views.Clientes"
+              BackgroundColor="#ecf0f1"
+             Title="Clientes">
+    <ListView ItemsSource="{Binding Clientes}"
+              HasUnevenRows="True"
+              BackgroundColor="#ecf0f1"
+              SeparatorVisibility="None"
+              HorizontalOptions="FillAndExpand"
+              VerticalOptions="FillAndExpand"
+              IsPullToRefreshEnabled="True"
+              x:Name="listaClientes">
+
+        <ListView.ItemTemplate>
+
+            <DataTemplate>
+                <ViewCell>
+                    <StackLayout Margin="6,4,6,4"
+                                 BackgroundColor="White">
+                        <Label Text="{Binding Nombre}"
+                               Margin="5,10,5,10"
+                               FontAttributes="Bold"
+                               FontSize="Medium" />
+                    </StackLayout>
+                </ViewCell>
+            </DataTemplate>
+
+        </ListView.ItemTemplate>
+    </ListView>
+</ContentPage>

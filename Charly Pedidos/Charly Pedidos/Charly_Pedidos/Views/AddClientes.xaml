@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<pages:PopupPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+             xmlns:clases="clr-namespace:Charly_Pedidos.Clases;assembly=Charly_Pedidos"
+             x:Class="Charly_Pedidos.Views.AddClientes"
+             Title="Nuevo cliente">
+  <!--Animations-->
+   <pages:PopupPage.Animation>
+    <clases:UserAnimation/>
+  </pages:PopupPage.Animation>
+  <StackLayout VerticalOptions="Center" 
+               HorizontalOptions="FillAndExpand"
+               Margin="15,0,15,0">
+    <StackLayout BackgroundColor="White"
+                 Padding="5, 25, 5,5">
+      <Label Text="Registrar nuevo cliente" 
+             TextColor="Black" FontSize="20" 
+             HorizontalOptions="Center"></Label>
+      <ScrollView>
+        <StackLayout>
+          <StackLayout Orientation="Horizontal">
+            <Entry Placeholder="Nombre o Apodo" 
+                   HorizontalOptions="FillAndExpand" 
+                   Keyboard="Text"
+                   x:Name="txtNombre"
+                   TextColor="#3498DB"></Entry>
+          </StackLayout>
+          <Button Text="Registrar y cerrar" 
+                  TextColor="White"
+                  x:Name="btnAddCliente"
+                  BackgroundColor="#3498DB"
+                  Clicked="OnClose"></Button>
+        </StackLayout>
+      </ScrollView>
+    </StackLayout>
+  </StackLayout>
+</pages:PopupPage>

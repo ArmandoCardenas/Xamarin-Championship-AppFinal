@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<pages:PopupPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+             xmlns:clases="clr-namespace:Charly_Pedidos.Clases;assembly=Charly_Pedidos"
+             x:Class="Charly_Pedidos.Views.Popups_informativos.Notificacion">
+  <pages:PopupPage.Animation>
+    <clases:UserAnimation/>
+  </pages:PopupPage.Animation>
+  <StackLayout VerticalOptions="Center"
+               HorizontalOptions="Center"
+               BackgroundColor="White"
+               Padding="10, 15, 10,10">
+    <Label x:Name="lblEncabezado"
+           TextColor="Black"
+           FontSize="20"
+           HorizontalOptions="Center"></Label>
+    <Label x:Name="lblMensaje"
+            FontSize="18"
+           TextColor="Black"></Label>
+    <Button Text="OK!"
+            TextColor="White"
+            Clicked="OnClose"
+            BackgroundColor="#3498DB"></Button>
+  </StackLayout>
+</pages:PopupPage>

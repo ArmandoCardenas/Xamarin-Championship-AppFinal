@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Charly_Pedidos.Views.Inicio"
+             Title="Inicio"
+             Icon="Icon.png">
+  <ContentPage.Content>   
+    <AbsoluteLayout Padding="5,0,5,0">
+      <AbsoluteLayout AbsoluteLayout.LayoutBounds="0,0,1,50"
+                      AbsoluteLayout.LayoutFlags="WidthProportional">       
+        <Label Text="Levantar pedido" 
+               FontSize="26"
+               TextColor="Black"
+               x:Name="lblTitulo"
+               HorizontalTextAlignment="Center" 
+               AbsoluteLayout.LayoutBounds=".5,0,1,40"
+               AbsoluteLayout.LayoutFlags="XProportional,WidthProportional" />
+      </AbsoluteLayout>
+      <AbsoluteLayout AbsoluteLayout.LayoutBounds="0,50,1,50"
+                      AbsoluteLayout.LayoutFlags="WidthProportional"
+                      Padding="5,0,0,0">
+        <Label Text="Cliente:" 
+               TextColor="Black"
+               AbsoluteLayout.LayoutBounds="0,25,.25,50"
+               AbsoluteLayout.LayoutFlags="WidthProportional" />
+       <Picker x:Name="lstClientes" 
+               TextColor="#3498DB"
+               Title="Elegir un cliente"
+               AbsoluteLayout.LayoutBounds="1,10,.75,50"
+               AbsoluteLayout.LayoutFlags="XProportional,WidthProportional"></Picker>      
+      </AbsoluteLayout>
+      <AbsoluteLayout 
+        AbsoluteLayout.LayoutBounds="0,100,1,50"
+        AbsoluteLayout.LayoutFlags="WidthProportional"
+        Padding="5,0,0,0">
+        <Label Text="*Pedido:"
+               TextColor="Black"
+               AbsoluteLayout.LayoutBounds="0,25,.25,50" 
+               AbsoluteLayout.LayoutFlags="WidthProportional" />
+        <Entry TextColor="#3498DB"
+               Placeholder="¿Que va a encargar?"
+               x:Name="txtPedido"
+               AbsoluteLayout.LayoutBounds="1,10,.75,50" 
+               AbsoluteLayout.LayoutFlags="XProportional,WidthProportional" />
+      </AbsoluteLayout>
+      <AbsoluteLayout AbsoluteLayout.LayoutBounds="0,150,1,50" 
+                      AbsoluteLayout.LayoutFlags="WidthProportional"
+                      Padding="5,0,0,0">
+        <Label Text="Pagado:" 
+               TextColor="Black"
+               AbsoluteLayout.LayoutBounds="0,25,.25,50" 
+               AbsoluteLayout.LayoutFlags="WidthProportional" />
+        <Switch AbsoluteLayout.LayoutBounds="0,10,.4,50" 
+                IsToggled="{Binding EsPagado}"
+                x:Name="Switch"
+                AbsoluteLayout.LayoutFlags="XProportional,WidthProportional"></Switch>
+      </AbsoluteLayout>
+            <AbsoluteLayout AbsoluteLayout.LayoutBounds="0,200,1,50"
+                      AbsoluteLayout.LayoutFlags="WidthProportional" 
+                      Padding="5,0,0,0">
+                <Label Text="*Apunte:" TextColor="Black"
+               AbsoluteLayout.LayoutBounds="0,25,.25,50"
+               AbsoluteLayout.LayoutFlags="WidthProportional" />
+                <Entry TextColor="#3498DB" 
+               Placeholder="$0.0" 
+               Keyboard="Numeric"
+               x:Name="txtApunte"
+               AbsoluteLayout.LayoutBounds="1,10,.75,50"
+               AbsoluteLayout.LayoutFlags="XProportional,WidthProportional" />
+            </AbsoluteLayout>
+        </AbsoluteLayout>
+  </ContentPage.Content>
+</ContentPage>

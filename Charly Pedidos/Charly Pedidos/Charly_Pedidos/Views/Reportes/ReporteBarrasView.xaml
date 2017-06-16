@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:oxy="clr-namespace:OxyPlot.Xamarin.Forms;assembly=OxyPlot.Xamarin.Forms"
+             x:Class="Charly_Pedidos.Views.Reportes.ReporteBarrasView"
+             BackgroundColor="#ecf0f1"
+             Title="Chole-Informe">
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="White"
+                     Margin="6,4,6,4">
+            <oxy:PlotView Model="{Binding Modelo}" BackgroundColor="White"
+                    VerticalOptions="Fill" HorizontalOptions="Fill" HeightRequest="300"/>
+            <StackLayout Margin="6,4,6,4"
+                     BackgroundColor="White">
+                <Label FontSize="Micro"
+                   Text="{Binding Lunes}"></Label>
+                <Label FontSize="Micro"
+                   Text="{Binding Martes}"></Label>
+                <Label FontSize="Micro"
+                   Text="{Binding Miercoles}"></Label>
+                <Label FontSize="Micro"
+                   Text="{Binding Jueves}"></Label>
+                <Label FontSize="Micro"
+                   Text="{Binding Viernes}"></Label>
+                <Label FontSize="Micro"
+                   Text="{Binding Sabado}"></Label>
+                <Label FontSize="Micro"
+                   Text="{Binding Domingo}"></Label>
+            </StackLayout>
+        </StackLayout>
+        <!--<StackLayout Margin="6,4,6,4"
+                     BackgroundColor="White">
+            <Label FontSize="Medium"
+                   Text="{Binding Lunes}"></Label>
+            <Label FontSize="Medium"
+                   Text="{Binding Martes}"></Label>
+            <Label FontSize="Medium"
+                   Text="{Binding Miercoles}"></Label>
+            <Label FontSize="Medium"
+                   Text="{Binding Jueves}"></Label>
+            <Label FontSize="Medium"
+                   Text="{Binding Viernes}"></Label>
+            <Label FontSize="Medium"
+                   Text="{Binding Sabado}"></Label>
+            <Label FontSize="Medium"
+                   Text="{Binding Domingo}"></Label>
+        </StackLayout>-->
+    </ContentPage.Content>
+</ContentPage>

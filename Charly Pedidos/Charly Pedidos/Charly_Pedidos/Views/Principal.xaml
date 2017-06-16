@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Charly_Pedidos.Views.Principal">
+  <MasterDetailPage.Master>
+    <ContentPage Title="Menu"
+                 BackgroundColor="#e8e8e8">
+
+      <StackLayout Orientation="Vertical">
+
+        <!-- 
+             This StackLayout you can use for other
+             data that you want to have in your menu drawer
+        -->
+
+        <AbsoluteLayout HeightRequest="200">
+          <StackLayout VerticalOptions="FillAndExpand"
+                   HeightRequest="200">
+            <Image Source="fondowood.jpg"
+             HorizontalOptions="FillAndExpand"
+             MinimumHeightRequest="200"
+             MinimumWidthRequest="360"
+          />
+          </StackLayout>
+          <Image Source="torta.png"
+          HeightRequest="100"
+           AbsoluteLayout.LayoutBounds="0.5,0.4,-1,-1"
+           AbsoluteLayout.LayoutFlags="PositionProportional" />
+          <Label Text="2,3,0,5 charmander"
+          AbsoluteLayout.LayoutBounds="0.5,0.9,-1,-1"
+          FontSize="25"
+          LineBreakMode="WordWrap"
+          AbsoluteLayout.LayoutFlags="PositionProportional">
+            <Label.FontFamily>
+              <OnPlatform x:TypeArguments="x:String">
+                <OnPlatform.Android>Roboto</OnPlatform.Android>
+                <OnPlatform.iOS>Courier New</OnPlatform.iOS>
+              </OnPlatform>
+            </Label.FontFamily>
+          </Label>
+
+        </AbsoluteLayout>
+
+        <ListView x:Name="navigationDrawerList"
+                  RowHeight="60"
+                  SeparatorVisibility="None"
+                  BackgroundColor="#e8e8e8"
+                  ItemSelected="OnMenuItemSelected">
+
+          <ListView.ItemTemplate>
+            <DataTemplate>
+              <ViewCell>
+
+                <!-- Main design for our menu items -->
+                <StackLayout VerticalOptions="FillAndExpand"
+                             Orientation="Horizontal"
+                             Padding="20,10,0,10"
+                             Spacing="20">
+
+                  <Image Source="{Binding Icon}"
+                         WidthRequest="40"
+                         HeightRequest="40"
+                         VerticalOptions="Center" />
+
+                  <Label Text="{Binding Title}"
+                         FontSize="Medium"
+                         VerticalOptions="Center"
+                         TextColor="Black"/>
+                </StackLayout>
+              </ViewCell>
+            </DataTemplate>
+          </ListView.ItemTemplate>
+        </ListView>
+      </StackLayout>
+
+    </ContentPage>
+  </MasterDetailPage.Master>
+
+  <MasterDetailPage.Detail>
+    <NavigationPage>
+
+    </NavigationPage>
+  </MasterDetailPage.Detail>
+</MasterDetailPage>
